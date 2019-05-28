@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class AddForm extends Component {
+class AddForm extends React.Component {
     state = {
         content: ''
     }
