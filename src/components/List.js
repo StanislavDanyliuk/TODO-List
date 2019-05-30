@@ -9,7 +9,7 @@ const List = ({ todos, deleteTodo }) => {
                     <span>
                         {todo.content}
                     </span>
-                    <span onClick={() => { deleteTodo(todo.id) }}><i class="small material-icons right red-text delete-btn">delete</i></span>
+                    <span onClick={() => { deleteTodo(todo.id) }}><i className="small material-icons right red-text delete-btn">delete</i></span>
                 </div>
             )
         })

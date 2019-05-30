@@ -28,6 +28,12 @@ class HomePage extends React.Component {
     ]
   }
 
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+  }
+
   deleteTodo = (id) => {
     const todos = this.state.todos.filter(todo => {
       return todo.id !== id
@@ -53,6 +59,7 @@ class HomePage extends React.Component {
         </h1>
         <List todos={this.state.todos} deleteTodo={this.deleteTodo} />
         <AddForm addTodo={this.addTodo} />
+        <footer className='page-footer'></footer>
       </div>
     );
   }
