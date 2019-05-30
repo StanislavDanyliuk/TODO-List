@@ -6,9 +6,10 @@ const List = ({ todos, deleteTodo }) => {
         todos.map(todo => {
             return (
                 <div className='collection-item' key={todo.id}>
-                    <span onClick={() => {deleteTodo(todo.id)}}>
+                    <span>
                         {todo.content}
                     </span>
+                    <span className='right' onClick={() => { deleteTodo(todo.id) }}>X</span>
                 </div>
             )
         })
