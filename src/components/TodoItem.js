@@ -1,22 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TodoItem = ({ text, isCompleted }) => (
-    <li className="todo-item collection">
-        <i className={isCompleted ? 'mark far fa-check-circle' : 'mark far fa-circle'} />
+const TodoItem = ({ text, isCompleted, deleteTask, id }) => (
+    <li className="todo-item collection-item">
+        {/* <i className={isCompleted ? 'mark far fa-check-circle' : 'mark far fa-circle'} /> */}
         <span className={isCompleted ? 'completed text' : 'text'}>{text}</span>
-        <i class="material-icons right">delete</i>
+        <i className="material-icons right" onClick={() => deleteTask(id)}>delete</i>
     </li>
 );
 
 TodoItem.propTypes = {
     text: PropTypes.string,
     isCompleted: PropTypes.bool,
+    deleteTask: PropTypes.func,
+    id: PropTypes.number,
+
 }
 
 TodoItem.defaultProps = {
+    id: 0,
     text: '',
     isCompleted: false,
+    deleteTask: () => { }
 }
 
 export default TodoItem;
