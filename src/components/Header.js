@@ -4,7 +4,14 @@ export default class Header extends Component {
     render() {
         return (
             <div>
-                <h1 className='center blue-text'>My Todo's:</h1>
+                <nav>
+                    <div className="nav-wrapper header">
+                        <a href="#" className="brand-logo">Logo</a>
+                        <ul id="nav-mobile" className="right">
+                            <li><a href="/login">Login</a></li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
         )
     }
