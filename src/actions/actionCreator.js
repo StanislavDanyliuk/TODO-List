@@ -1,10 +1,9 @@
 import { ADD_TASK, DELETE_TASK } from '../constants/constants'
 
-export const addTask = (id, text, isCompleted) => ({
+export const addTask = (id, text) => ({
     type: ADD_TASK,
     id,
     text,
-    isCompleted
 });
 
 export const deleteTask = (id) => ({
