@@ -6,7 +6,7 @@ export default class Header extends Component {
             <div>
                 <nav>
                     <div className="nav-wrapper header">
-                        <a href="#" className="brand-logo">Logo</a>
+                        <a href="/" className="brand-logo">Logo</a>
                         <ul id="nav-mobile" className="right">
                             <li><a href="/login">Login</a></li>
                         </ul>
