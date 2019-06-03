@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import '../main.scss'
 
 const TodoItem = ({ text, deleteTask, id }) => (
-    <li className="todo-item collection-item">
+    <li className="collection-item">
         <span>{text}</span>
         <i className="material-icons right red-text delete-btn" onClick={() => deleteTask(id)}>delete</i>
     </li>

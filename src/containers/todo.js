@@ -45,6 +45,7 @@ class Todo extends Component {
         fetch('https://jsonplaceholder.typicode.com/todos')
             .then(res => res.json())
             .then(data => {
+                // eslint-disable-next-line array-callback-return
                 let todos = data.map(todo => {
 
                     if (todo.userId === this.state.userId) {
